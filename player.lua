@@ -17,9 +17,6 @@ function player:new(x, y, height, width, speed)
       right = false,
       grounded = false,
       moving = false,
-      -- el pulso lo usamos para animar los sprites
-      timer = 0,
-      heartbeat = false,
   }
   setmetatable(p, {__index = player})
   return p
@@ -27,7 +24,7 @@ end
 
 function player:update(dt)
   -- movimiento del jugador
-  -- change up key to only pressed once https://love2d.org/wiki/love.keypressed
+  -- maybe change up key to only pressed once https://love2d.org/wiki/love.keypressed
   if love.keyboard.isDown('up')then
     io.write("key pressed: up\n")
     self.y = self.y - self.speed * dt

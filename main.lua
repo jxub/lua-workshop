@@ -10,8 +10,11 @@ function love.load()
   -- cargamos la imagen del fondo
   background = love.graphics.newImage('sprites/background.png')
   -- creamos el jugador y la plataforma
-  player = player:new(WINDOW_WIDTH/2, WINDOW_HEIGHT/2 - 40)
+  player = player:new(WINDOW_WIDTH/2, WINDOW_HEIGHT/2)
   platform = platform:new(0, WINDOW_HEIGHT/2)
+  -- cargamos la música y la reproducimos
+  music = love.audio.newSource("mario_soundtrack.mp3")
+  music:play()
 end
 
 -- lógica interna del juego, que cambia con cada frame dt

@@ -1,4 +1,4 @@
-# lua-workshop
+# Lua and Love2d for games - Workshop
 ------------
 Material and code for the 27 April'17 Game programmng in Lua and Love2d workshop at UPV
 

@@ -7,7 +7,7 @@ function player:new(x, y, height, width, speed)
       height = height or 20, -- valor por defecto
       width = width or 20,
       speed = speed or 200,
-      -- now the images... lots of them!
+      -- ahora imágenes... muchas!
       standingRight = love.graphics.newImage('sprites/mario_standing_right.png'),
       movingRight = love.graphics.newImage('sprites/mario_moving_right.png'),
       standingLeft = love.graphics.newImage('sprites/mario_standing_left.png'),
@@ -16,7 +16,6 @@ function player:new(x, y, height, width, speed)
       left = true,
       right = false,
       grounded = false,
-      moving = false,
   }
   setmetatable(p, {__index = player})
   return p
